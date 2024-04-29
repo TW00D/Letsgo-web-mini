@@ -5,6 +5,29 @@ export const ConfirmListContainer = styled.div`
   max-width: 40%;
   background-color: #fff;
   margin-top: 2%;
+
+  .pagination {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    > * {
+      cursor: pointer;
+    }
+  }
+
+  .pagination__link {
+    transition: all 0.25s;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.3rem;
+  }
+
+  .pagination__link__active {
+    background-color: #bbb;
+    color: #fefefe;
+  }
 `;
 
 export const ConfirmImageWrap = styled.div`
