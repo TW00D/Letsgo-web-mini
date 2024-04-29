@@ -5,7 +5,6 @@ export const ConfirmListContainer = styled.div`
   max-width: 40%;
   background-color: #fff;
   margin-top: 2%;
-  
 `;
 
 export const ConfirmImageWrap = styled.div`

@@ -1,13 +1,9 @@
 import * as C from "./style";
-import chat from "../../../../assets/img/Chat.svg";
-import send from "../../../../assets/img/Send.svg";
 import Comment from "./Comment";
 import { useRecoilState } from "recoil";
 import CommentInput from "./CommentInput";
 import { postIdState } from "../../../../components/atom/postId";
 import { useCommentListQuery } from "../../../../hooks/Comment/getCommentList";
-import { useCreateComment } from "../../../../hooks/Comment/useComment";
-import { useEffect } from "react";
 
 interface propsType {
   postId: number;
