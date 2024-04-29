@@ -6,9 +6,9 @@ export interface TokenResponse {
   data: {
     username: string;
     nickname: string;
-    access_token: string
-    refresh_token: string
-  }
+    access_token: string;
+    refresh_token: string;
+  };
 }
 
 export interface UserLoginRequestDto {

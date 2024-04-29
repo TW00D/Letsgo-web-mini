@@ -10,7 +10,8 @@ import { usePostListQuery, PostType } from "../../../hooks/Post/getPostList";
 const Table: React.FC = () => {
   const navigate = useNavigate();
 
-  const { data: postListData, isLoading, isError } = usePostListQuery();
+  const { data: postListData, isLoading, isError } = usePostListQuery(1);
+  console.log(postListData);
 
   return (
     <S.ConfirmListContainer>
@@ -22,7 +23,7 @@ const Table: React.FC = () => {
         <div>게시물이 없습니다.</div>
       ) : (
         postListData.map((post: PostType) => (
-          <div 
+          <S.ConfirmListItemContaienr
             onClick={() => navigate(`/post/${post.id}`)}
             key={post.id}
             style={{ cursor: "pointer" }}

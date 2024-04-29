@@ -31,10 +31,44 @@ export function useReadPost(id: number) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchPost = async () => {
-      const { accessToken } = getToken();
-      setIsLoading(true);
+    const { accessToken } = getToken();
+    setIsLoading(true);
 
+    // const fetchPost = async () => {
+    //   const { accessToken } = getToken();
+    //   setIsLoading(true);
+
+    //   try {
+    //     const response = await instance.get<ApiResponse<Post>>(
+    //       `${import.meta.env.VITE_BASE_URL}/post/${postId}`,
+    //       {
+    //         headers: {
+    //           Authorization: `Bearer ${accessToken}`,
+    //         },
+    //       }
+    //     );
+
+    //     const postData = response.data.data;
+    //     setPost(postData);
+    //     setIsLoading(false);
+    //   } catch (error) {
+    //     if (axios.isAxiosError(error)) {
+    //       setError("서버 오류 발생");
+    //     } else {
+    //       setError("네트워크 오류 발생");
+    //     }
+    //     setIsLoading(false);
+    //   }
+    // };
+
+    const search = axios.create({
+      baseURL: `${import.meta.env.VITE_BASE_URL}`,
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    async function fetchPost() {
       try {
         const response = await instance.get<ApiResponse<Post>>(
           `${import.meta.env.VITE_BASE_URL}/post/${id}`,
@@ -56,7 +90,7 @@ export function useReadPost(id: number) {
         }
         setIsLoading(false);
       }
-    };
+    }
 
     fetchPost();
   }, [id]);

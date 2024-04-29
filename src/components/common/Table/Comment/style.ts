@@ -5,7 +5,7 @@ export const CommentContainer = styled.div`
   min-width: 40%;
   background-color: #fff;
   margin-top: 2%;
-  padding: 2%;
+  padding: 4%;
   box-sizing: border-box;
 `;
 
@@ -13,6 +13,7 @@ export const CommentHeaderWraper = styled.div`
   display: flex;
   flex-direction: row;
   column-gap: 5px;
+  margin-bottom: 2%;
 `;
 
 export const CommentHeaderTitle = styled.h5`
@@ -33,7 +34,7 @@ export const CommentNumber = styled.h5`
 export const CommentRestart = styled.h5`
   font-family: "pretendard";
   font-size: 0.8em;
-  background-image: linear-gradient(to top, #db00ff, #455cec);
+  background-image: linear-gradient(to right, #db00ff, #455cec);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -42,7 +43,7 @@ export const CommentRestart = styled.h5`
 
 export const CommentInputWraper = styled.div`
   width: 100%;
-  height: 12%;
+  height: 8%;
   background-color: #f8f8f8;
   border-radius: 10px;
   display: flex;

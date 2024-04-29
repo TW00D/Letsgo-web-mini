@@ -3,7 +3,7 @@ import { useMutation } from "react-query";
 import instance from "../../axios";
 import { getToken } from "../../functions/TokenManagers";
 
-export interface PostResponse {
+export interface CommentResponse {
   code: string;
   message: string;
   data: boolean;
@@ -17,9 +17,9 @@ export interface CommentRequestDto {
 
 export const useCreateCommentMutation = () => {
   const { accessToken } = getToken();
-  return useMutation<PostResponse, AxiosError, CommentRequestDto, unknown>(
+  return useMutation<CommentResponse, AxiosError, CommentRequestDto, unknown>(
     async (commentData: CommentRequestDto) => {
-      const response = await instance.post<PostResponse>(
+      const response = await instance.post<CommentResponse>(
         `${import.meta.env.VITE_BASE_URL}/comment`,
         commentData,
         {
