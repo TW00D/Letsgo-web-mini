@@ -29,9 +29,10 @@ export const CommentTitle = styled.h2`
   font-weight: 500;
 `;
 export const CommentPostTime = styled.h2`
+  width: 200px;
   font-family: "pretendard";
   color: #4d4d53;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 0.7em;
 `;
 
@@ -51,7 +52,7 @@ export const CommentContent = styled.h2`
 export const CommentBottomWraper = styled.div`
   display: flex;
   align-items: center;
-
+  margin-top: 1%;
   column-gap: 4px;
 `;
 
