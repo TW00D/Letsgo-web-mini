@@ -20,15 +20,11 @@ export const useCreatePostMutation = () => {
   const { accessToken } = getToken();
   return useMutation<PostResponse, AxiosError, PostRequestDto, unknown>(
     async (postData: PostRequestDto) => {
-      const response = await instance.post<PostResponse>(
-        `${import.meta.env.VITE_BASE_URL}/post`,
-        postData,
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        }
-      );
+      const response = await instance.post<PostResponse>("/post", postData, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      });
       return response.data;
     }
   );

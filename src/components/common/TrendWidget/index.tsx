@@ -4,17 +4,17 @@ import * as T from "./style";
 const dummy = [
   {
     rank: 1,
-    title: "노무현",
+    title: "노윤서",
     point: 1000,
   },
   {
     rank: 2,
-    title: "노무현",
+    title: "노윤서",
     point: 1000,
   },
   {
     rank: 3,
-    title: "노무현",
+    title: "노윤서",
     point: 1000,
   },
   {
@@ -24,17 +24,17 @@ const dummy = [
   },
   {
     rank: 5,
-    title: "노무현",
+    title: "노윤서",
     point: 1000,
   },
   {
     rank: 6,
-    title: "노무현",
+    title: "노윤서",
     point: 1000,
   },
   {
     rank: 7,
-    title: "노무현",
+    title: "노윤서",
     point: 1000,
   },
   {

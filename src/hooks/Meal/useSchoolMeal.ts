@@ -13,7 +13,7 @@ export const useSchoolMenuQuery = (year: string, month: string, day: string) => 
     ["schoolMenu", year, month, day],
     async () => {
       const response = await instance.get<SchoolMenuResponse>(
-        `${import.meta.env.VITE_BASE_URL}/school?year=${year}&month=${month}&day=${day}`
+        `/school?year=${year}&month=${month}&day=${day}`
       );
       return response.data;
     },

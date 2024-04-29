@@ -25,12 +25,12 @@ const Writing = () => {
           placeholder="내용을 입력하세요"
           onChange={handleChange}
         />
-        <W.ImageButton type="submit" />
+        <W.ImageButton />
         <W.WritingButtonWrapper>
           <W.WritingCancelButton onClick={() => navigate("/")}>
             <span>취소</span>
           </W.WritingCancelButton>
-          <W.WritingPostButton>
+          <W.WritingPostButton type="submit">
             <span>작성완료</span>
           </W.WritingPostButton>
         </W.WritingButtonWrapper>

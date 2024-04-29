@@ -1,8 +1,7 @@
 import toast from "react-hot-toast";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios, { AxiosError } from "axios";
 import { useNavigate } from "react-router-dom";
-import { useCreatePostMutation } from "../../utils/api/Writing";
 import { useCreateCommentMutation } from "../../utils/api/Comment";
 
 type CommentProps = {

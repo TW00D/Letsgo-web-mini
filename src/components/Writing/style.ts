@@ -60,13 +60,14 @@ export const WritingButtonWrapper = styled.div`
   justify-content: flex-end;
 `
 
-export const WritingCancelButton = styled.div`
+export const WritingCancelButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 105px;
   height: 37px;
   border-radius: 5px;
+  border: none;
   background-color: #F1F1F3;
 
   margin-right: 1%;
@@ -82,12 +83,13 @@ export const WritingCancelButton = styled.div`
   }
 `
 
-export const WritingPostButton = styled.div`
+export const WritingPostButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 105px;
   height: 37px;
+  border: none;
   border-radius: 5px;
   background-color: #db00ff;
 

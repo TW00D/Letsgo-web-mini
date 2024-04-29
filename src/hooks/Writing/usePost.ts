@@ -13,7 +13,7 @@ type PostProps = {
 
 export function useCreatePost() {
   const [postData, setPostData] = useState<PostProps>({
-    category: 0,
+    category: 1,
     title: "",
     content: "",
     picture: "",
@@ -46,6 +46,8 @@ export function useCreatePost() {
       onError: (err: AxiosError) => {
         if (axios.isAxiosError(err)) {
           toast.error("게시물 등록에 실패했습니다.");
+          console.log("err:", err.response?.data);
+          
         } else {
           toast.error("네트워크 연결 상태를 확인해주세요.");
         }

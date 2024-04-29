@@ -1,4 +1,4 @@
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { getToken } from "../../utils/functions/TokenManagers";
 import instance from "../../utils/axios";
