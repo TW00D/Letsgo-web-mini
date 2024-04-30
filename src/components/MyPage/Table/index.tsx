@@ -10,11 +10,16 @@ import {
   usePostListQuery,
   PostType,
 } from "../../../hooks/Post/MyPage/usePostList";
+import ReactPaginate from "react-paginate";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const Table = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
   const [postId, setPostId] = useState<number | null>(null);
+  const postsPerPage = 10;
   const { data: posts, isLoading, isError } = usePostListQuery();
+  const pageCount = Math.ceil((posts?.length || 0) / postsPerPage);
 
   const handleModalOpen = (postId: number) => {
     setPostId(postId);
@@ -24,6 +29,12 @@ const Table = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+
+  const handlePageChange = ({ selected }: { selected: number }) => {
+    setCurrentPage(selected);
+    window.scrollTo(0, 320);
+  };
+
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error: {isError}</div>;
@@ -56,6 +67,15 @@ const Table = () => {
           </S.RightBottomInfo>
         </S.ConfirmListItemContaienr>
       ))}
+       <ReactPaginate
+            previousLabel={<FiChevronLeft />}
+            nextLabel={<FiChevronRight />}
+            pageCount={pageCount}
+            onPageChange={handlePageChange}
+            containerClassName={"pagination"}
+            pageLinkClassName={"pagination__link"}
+            activeLinkClassName={"pagination__link__active"}
+          />
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
     </S.ConfirmListContainer>
   );

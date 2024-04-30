@@ -25,9 +25,7 @@ export function useCreatePost() {
   const createPostMutation = useCreatePostMutation();
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLTextAreaElement | HTMLInputElement | HTMLButtonElement
-    >
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
     const { name, value } = e.target;
     setPostData((prevData) => ({
@@ -35,7 +33,7 @@ export function useCreatePost() {
       [name]: value,
     }));
   };
-
+  
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     createPostMutation.mutate(postData, {
@@ -47,7 +45,6 @@ export function useCreatePost() {
         if (axios.isAxiosError(err)) {
           toast.error("게시물 등록에 실패했습니다.");
           console.log("err:", err.response?.data);
-          
         } else {
           toast.error("네트워크 연결 상태를 확인해주세요.");
         }
@@ -68,10 +65,10 @@ export function useCreatePost() {
   };
 
   const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const imageFile = e.target.files?.[0]; 
+    const imageFile = e.target.files?.[0];
     setPostData((prevData) => ({
       ...prevData,
-      image: imageFile
+      image: imageFile,
     }));
   };
 
