@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TrendPost from "./TrendPost";
 import * as T from "./style";
 import { APPLY_ITEMS } from "./constants";
 import { useRankQuery, RankType } from "../../../hooks/Trends/useTrendChart";
 
 const TrendWidget: React.FC = () => {
-  const { data, isLoading, isError } = useRankQuery();
+  const { data, isLoading, isError, refetch } = useRankQuery();
   const [section, setSection] = useState("1위~10위");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      refetch();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [refetch]);
 
   return (
     <T.TrendWidgetContainer>
