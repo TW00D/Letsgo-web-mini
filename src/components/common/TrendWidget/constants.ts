@@ -1,1 +1,1 @@
-export const APPLY_ITEMS = ["1~10위", "11위~20위"] as const;
+export const APPLY_ITEMS = ["1위~10위", "11위~20위"] as const;

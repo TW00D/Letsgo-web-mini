@@ -64,14 +64,6 @@ export function useCreatePost() {
     }));
   };
 
-  const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const imageFile = e.target.files?.[0];
-    setPostData((prevData) => ({
-      ...prevData,
-      image: imageFile,
-    }));
-  };
-
   return {
     postData,
     postSelected,
@@ -80,6 +72,6 @@ export function useCreatePost() {
     handleSubmit,
     handlePostClick,
     categorySelected,
-    handleCategoryClick,
+    handleCategoryClick
   };
 }
