@@ -75,7 +75,7 @@ const Post: React.FC = () => {
           <d.PostMidWrap>
             {post?.picture && <img src={post.picture} alt="post" />}
           </d.PostMidWrap>
-          <d.PostHeading>{post?.content}</d.PostHeading>
+          <d.PostHeading dangerouslySetInnerHTML={{ __html: post?.content as string }} />
           <d.PostTagContainer style={{ marginBottom: "2%" }}>
             <d.PostTagHeading>#태그</d.PostTagHeading>
             <d.PostTagHeading>#태그</d.PostTagHeading>

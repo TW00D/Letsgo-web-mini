@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const TrendWidgetContainer = styled.div`
   display: flex;
@@ -34,11 +34,11 @@ export const TrendActiveButton = styled.button<{ isSelect: boolean }>`
   width: 120px;
   height: 30px;
   font-family: "Pretendard";
-  background: ${props =>
+  background: ${(props) =>
     props.isSelect
-      ? 'linear-gradient(#fff, #fff) padding-box, linear-gradient(60deg, #455cec, #db00ff) border-box'
-      : 'linear-gradient(#fff, #fff) padding-box, linear-gradient(60deg, #9f9faf, #9f9faf) border-box'};
-  color: ${props => (props.isSelect ? '#313149' : '#9f9faf')};
+      ? "linear-gradient(#fff, #fff) padding-box, linear-gradient(60deg, #455cec, #db00ff) border-box"
+      : "linear-gradient(#fff, #fff) padding-box, linear-gradient(60deg, #9f9faf, #9f9faf) border-box"};
+  color: ${(props) => (props.isSelect ? "#313149" : "#9f9faf")};
   border: 2px solid transparent;
   display: inline-block;
   cursor: pointer;
@@ -55,7 +55,6 @@ export const TrendDisableButton = styled.button`
   border-color: #ecebee;
   color: #9f9faf;
   border-style: solid;
-  border-top-right-radius: 10px;
 
   cursor: pointer;
 `;
