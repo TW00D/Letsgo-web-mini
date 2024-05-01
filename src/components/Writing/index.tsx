@@ -9,7 +9,13 @@ import { useState } from "react";
 
 const Writing = () => {
   const navigate = useNavigate();
-  const { postData, handleChange, handleSubmit } = useCreatePost();
+  const {
+    postData,
+    handleChange,
+    handleSubmit,
+    handleImageChange,
+    handleImageUpload,
+  } = useCreatePost();
   const [editorHtml, setEditorHtml] = useState<string>("");
 
   const handleEditorChange = (html: string) => {
@@ -23,6 +29,8 @@ const Writing = () => {
     <Layout>
       <W.WritingContainer onSubmit={handleSubmit}>
         <WritingHeader />
+        <input type="file" onChange={handleImageUpload} />  
+        <W.ImageButton type="button" onClick={handleImageUpload}/>
         <W.WritingTitleInput
           type="text"
           name="title"
@@ -45,7 +53,6 @@ const Writing = () => {
             padding: "2%",
           }}
         />
-        <W.ImageButton />
         <W.WritingButtonWrapper>
           <W.WritingCancelButton onClick={() => navigate("/")}>
             <span>취소</span>

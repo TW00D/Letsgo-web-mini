@@ -13,6 +13,7 @@ export const WritingContainer = styled.form`
   padding: 1%;
   box-sizing: border-box;
   flex-direction: column; 
+  
 `;
 
 export const WritingTitleInput = styled.input`
