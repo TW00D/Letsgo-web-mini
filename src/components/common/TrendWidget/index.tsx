@@ -16,13 +16,13 @@
 //     return () => clearInterval(interval);
 //   }, [refetch]);
 
-//   if (isLoading) {
-//     return <div>Loading...</div>;
-//   }
+//   // if (isLoading) {
+//   //   return <div>Loading...</div>;
+//   // }
 
-//   if (isError) {
-//     return <div>Error occurred while fetching data</div>;
-//   }
+//   // if (isError) {
+//   //   return <div>Error occurred while fetching data</div>;
+//   // }
 
 //   const trendData = Array.isArray(data) ? data : [];
 
@@ -64,52 +64,52 @@ import * as T from "./style";
 const dummy = [
   {
     rank: 1,
-    title: "노윤서",
+    title: "자",
     point: 1000,
   },
   {
     rank: 2,
-    title: "노윤서",
+    title: "현이",
     point: 1000,
   },
   {
     rank: 3,
-    title: "노윤서",
+    title: "그냥",
     point: 1000,
   },
   {
     rank: 4,
-    title: "노윤서",
+    title: "도르트문트",
     point: 1000,
   },
   {
     rank: 5,
-    title: "노윤서",
+    title: "그",
     point: 1000,
   },
   {
     rank: 6,
-    title: "노윤서",
+    title: "해",
     point: 1000,
   },
   {
     rank: 7,
-    title: "노윤서",
+    title: "공부",
     point: 1000,
   },
   {
     rank: 8,
-    title: "노윤서",
+    title: "어제",
     point: 1000,
   },
   {
     rank: 9,
-    title: "노윤서",
+    title: "저녁",
     point: 1000,
   },
   {
     rank: 10,
-    title: "노윤서",
+    title: "자전거",
     point: 1000,
   },
 ];
