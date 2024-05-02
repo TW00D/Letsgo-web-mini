@@ -20,8 +20,6 @@ export function useCreatePost() {
   });
   const [postSelected, setPostSelected] = useState<number>(0);
   const [categorySelected, setCategorySelected] = useState<number>(0);
-  const [editorHtml, setEditorHtml] = useState<string>("");
-  const [selectedImage, setSelectedImage] = useState<File | null>(null);
 
   const navigate = useNavigate();
   const createPostMutation = useCreatePostMutation();
@@ -66,30 +64,6 @@ export function useCreatePost() {
     }));
   };
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files && e.target.files[0];
-    if (file) {
-      setSelectedImage(file);
-    }
-  };
-
-  const handleImageUpload = async () => {
-    try {
-      if (!selectedImage) return;
-      
-      const formData = new FormData();
-      formData.append("picture", selectedImage);
-  
-      const response = await axios.post("http://49.50.175.242:6742/v1/api/picture", formData);
-      const imageUrl = response.data.data.id;
-  
-      const newHtml = `<img src="/v1/api/picture/${imageUrl}" alt="Uploaded Image" />`;
-      setEditorHtml(editorHtml + newHtml);
-    } catch (error) {
-      console.error("Error uploading image:", error);
-    }
-  };  
-
   return {
     postData,
     postSelected,
@@ -99,7 +73,5 @@ export function useCreatePost() {
     handlePostClick,
     categorySelected,
     handleCategoryClick,
-    handleImageChange,
-    handleImageUpload
   };
 }

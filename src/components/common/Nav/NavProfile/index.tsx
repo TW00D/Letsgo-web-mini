@@ -5,7 +5,7 @@ const NavProfile = () => {
   return (
     <>
       <NavAvatar />
-      <NavScore></NavScore>
+      <NavScore />
     </>
   );
 };

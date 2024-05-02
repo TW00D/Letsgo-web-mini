@@ -59,7 +59,7 @@ const Table: React.FC = () => {
                     <S.ConfirmSubTitle>
                       <span>통합</span>
                       <span> | </span>
-                      <span>선화예술고등학교 3학년</span>
+                      <span>대구소프트웨어마이스터고 3학년</span>
                     </S.ConfirmSubTitle>
                   </S.ConfirmListItem>
                   <S.RightTopInfo>

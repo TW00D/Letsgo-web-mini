@@ -52,7 +52,7 @@ const Post: React.FC = () => {
               }}
             >
               <div style={{ margin: "0 1%" }}>
-                <d.PostLeftSubTitle>게임</d.PostLeftSubTitle>
+                <d.PostLeftSubTitle>통합</d.PostLeftSubTitle>
                 <d.PostLeftSubTitle>1일전</d.PostLeftSubTitle>
                 <d.PostLeftSubTitle>
                   대구소프트웨어마이스터고 3학년 여학생

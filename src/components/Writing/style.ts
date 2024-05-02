@@ -17,7 +17,9 @@ export const WritingContainer = styled.form`
 `;
 
 export const WritingTitleInput = styled.input`
+  width: 93.9%;
   height: 6%;
+  margin-left: 2%;
   outline: none;
   border: none;
   border: 1px solid #bdbdc8;
@@ -59,6 +61,7 @@ export const ImageButton = styled.button`
 export const WritingButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+  margin-right: 2%;
 `
 
 export const WritingCancelButton = styled.button`

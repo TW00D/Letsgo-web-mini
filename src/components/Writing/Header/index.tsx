@@ -1,4 +1,3 @@
-import { useState } from "react";
 import * as W from "./style";
 import { CHANNAL_GROUP_ITEM, POST_GROUP_ITEM } from "./constant";
 import { useCreatePost } from "../../../hooks/Writing/usePost";
