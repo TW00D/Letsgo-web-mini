@@ -1,24 +1,3 @@
-// import * as T from "./style";
-
-// type TrendPostProps = {
-//   data: {
-//     word: string;
-//     count: number;
-//   };
-// };
-
-// const TrendPost: React.FC<TrendPostProps> = ({ data }) => {
-//   return (
-//     <>
-//       <T.TrendPostContainer>
-//         <T.TrendPostTitle>{data.word}</T.TrendPostTitle>
-//         <T.TrendPostPoint>{data.count}</T.TrendPostPoint>
-//       </T.TrendPostContainer>
-//     </>
-//   );
-// };
-
-// export default TrendPost;
 import * as T from "./style";
 
 type TrendPostType = {
